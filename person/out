@@ -1,0 +1,28 @@
+function add(){
+  
+ let person = {
+  firstName:   document.getElementById("1.1").value,
+  lastname:   document.getElementById("1.2").value,
+  birthdate:      document.getElementById("1.3").value,
+  cityId:   document.getElementById("1.4").value,
+  photoUrl:   document.getElementById("1.5").value
+}
+
+let json = JSON.stringify(person)
+
+ console.log (json)
+
+        alert("success")
+
+  $.ajax({
+  url: 'http://localhost:8000/person_list/',
+  method: 'POST',
+  data: {JSON: json},
+  
+  
+       })
+
+
+       
+}
+
