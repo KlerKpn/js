@@ -1,0 +1,11 @@
+$( document ).ready(function() {
+    $( "button" ).click(function() { 
+      $.getJSON( "test.json", function ( data, textStatus, jqXHR ) { 
+        var out = ""
+        for ( key in data ) {
+      out += ( key + ": " + data[key] + "<br>")
+        }; 
+      })
+    })
+  })
+   
